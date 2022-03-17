@@ -6,6 +6,9 @@
     justify-content: center;
     align-items: center;
 }
+.titleColor{
+    color: black;
+}
 .imgPost{
     border-radius: 12px;
 }

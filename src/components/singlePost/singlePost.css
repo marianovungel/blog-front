@@ -4,6 +4,12 @@
 .singlePostWrapper{
     padding: 20px;
     padding-right: 0;
+    display: flex;
+    flex-direction: column;
+}
+.authorColor{
+    text-decoration: none;
+    color: rgb(245, 81, 81);
 }
 .singlePostImg{
     width: 100%;
@@ -15,6 +21,16 @@
     text-align: center;
     margin: 10px;
     font-size: 28px;
+}
+.siglePostTitleInput{
+    text-align: justify;
+    margin: 10px;
+    font-size: 28px;
+    border: none;
+    border-bottom: 1px solid black;
+}
+.siglePostTitleInput:focus{
+    outline: none;
 }
 .singlePostEdit{
     float: right;
@@ -46,4 +62,24 @@
     margin-left: 20px;
     font-size: 30px;
     font-weight: 600;
+}
+.singlePostDescInput{
+    border: none;
+    color: #666;
+    font-size: 18px;
+    line-height: 25px;
+}
+.singlePostDescInput:focus{
+    outline: none;
+}
+.singlePostButton{
+    width: 170px;
+    border: none;
+    background-color: teal;
+    padding: 6px;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    align-self: flex-end;
+    margin-top: 20px;
 }

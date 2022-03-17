@@ -10,6 +10,17 @@
 .registerTitle{
     font-size: 50px;
 }
+.banner{
+    background-color: yellow;
+    width: 400px;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid red;
+    color: rgb(39, 35, 35);
+}
 .registerForm{
     margin-top: 20px;
     display: flex;

@@ -1,21 +1,13 @@
 import Post from "../post/Post"
 import "./posts.css"
 
-export default function Posts() {
+export default function Posts({postsa}) {
+    console.log(postsa)
     return (
-        <div className="posts">
-           <Post />
-           <Post />
-           <Post />
-           <Post />
-           <Post />
-           <Post />
-           <Post />
-           <Post />
-           <Post />
-           <Post />
-           <Post />
-           <Post /> 
+        <div className="postss">
+            {postsa.map((p) => (
+                <Post post={p} />
+            ))}
         </div>
     )
 }

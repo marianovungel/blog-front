@@ -1,41 +1,27 @@
+import { Link } from "react-router-dom"
 import "./post.css"
 
-export default function Post() {
+export default function Post({post}) {
+    const URLImg = "http://localhost:5000/images/";
+
     return (
         <div className="post">
-            <img className="imgPost" src="https://i.pinimg.com/236x/1d/ed/55/1ded551e08dcf538880979ae5fb3fea1.jpg" alt="foto do sidebar"/>
-            
+            {post.photo && (
+                <img className="imgPost" src={URLImg + post.photo} alt="foto do sidebar"/>
+            )}
+              {/* (<img className="imgPost" src="https://i.pinimg.com/236x/1d/ed/55/1ded551e08dcf538880979ae5fb3fea1.jpg" alt="foto do sidebar"/>) */}
+        
             <div className="postInfo">
                 <div className="postCats">
-                    <span className="postCat">Music</span>
-                    <span className="postCat">Life</span>
+                    <span className="postCat">Photo</span>
                 </div>
-                <span className="postTitle">lorem ipsum dolor sit amet</span>
+                <Link className="titleColor" to={`/post/${post._id}`}>
+                    <span className="postTitle">{post.title}</span>
+                </Link>
                 <hr/>
-                <span className="postDate">1 hour ago</span>
+                <span className="postDate">{new Date(post.createdAd).toDateString()}</span>
             </div>
-            <p className="postDesc">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla 
-                nostrum porro expedita
-                 veniam necessitatibus temporibus praesentium odit quidem tempore.
-                 Ratione veniam placeat mollitia dolores unde consequatur nihil? Eius,
-                  fugit at?
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla 
-                nostrum porro expedita
-                 veniam necessitatibus temporibus praesentium odit quidem tempore.
-                 Ratione veniam placeat mollitia dolores unde consequatur nihil? Eius,
-                  fugit at?
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla 
-                nostrum porro expedita
-                 veniam necessitatibus temporibus praesentium odit quidem tempore.
-                 Ratione veniam placeat mollitia dolores unde consequatur nihil? Eius,
-                  fugit at?
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla 
-                nostrum porro expedita
-                 veniam necessitatibus temporibus praesentium odit quidem tempore.
-                 Ratione veniam placeat mollitia dolores unde consequatur nihil? Eius,
-                  fugit at?
-                  </p>
+            <p className="postDesc">{post.desc}</p>
         </div>
     )
 }

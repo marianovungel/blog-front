@@ -8,6 +8,10 @@
     flex-direction: column;
     align-items: center;
 }
+.catColor{
+    text-decoration: none;
+    color: #222;
+}
 .sidebarItem{
     display: flex;
     flex-direction: column;
