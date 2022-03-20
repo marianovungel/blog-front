@@ -11,6 +11,14 @@
 }
 .imgPost{
     border-radius: 12px;
+    width: 400px;
+    height: 400px;
+    max-width: 400px;
+    min-width: 180px;
+    min-height: 100px;
+    max-height: 250px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 .postImg{
     width: 100%;

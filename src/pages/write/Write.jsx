@@ -23,7 +23,8 @@ export default function Write() {
             data.append("file", file)
             newProst.photo = filename;
             try{
-                await api.post("/upload", data)
+                const newdata = await api.post('/upload', data)
+                console.log(newdata)
             }catch(err){}
         }
 
@@ -46,7 +47,7 @@ export default function Write() {
                     <i class="writeIcon fas fa-plus"></i>
                   </label>
                   <input type="file" id="fileInput" style={{display:"none"}} onChange={(e)=>setFile(e.target.files[0])}/>
-                  <input type="text" placeholder="Title" autoFocus={true} onChange={e=>setTitle(e.target.value)}/>
+                  <input type="text" className="writetitle" placeholder="Title" autoFocus={true} onChange={e=>setTitle(e.target.value)}/>
               </div>
               <div className="writeFormGroup">
                   <textarea placeholder="Tell your story..." type="text" className="writeInput writeText" onChange={e=>setDesc(e.target.value)}></textarea>

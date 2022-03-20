@@ -7,7 +7,7 @@ export default function Header() {
                 <span className="headerTitleSm">Maria Borges</span>
                 <span className="headerTitleLg">Blog</span>
             </div>
-            <img className="headerImg" src="https://www2.pictures.zimbio.com/gi/Maria+Borges+vW5IYuOXLxZm.jpg" alt="headerImg"/>
+            <img className="headerImg" src="https://images.unsplash.com/photo-1459478309853-2c33a60058e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="headerImg"/>
         </div>
     )
 }

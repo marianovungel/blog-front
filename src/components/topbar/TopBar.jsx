@@ -12,7 +12,7 @@ export default function TopBar() {
         e.preventDefault();
         dispatch({type:"LOGOUT"})
     }
-    const URLImg = "http://localhost:5000/images/";
+    // const URLImg = "http://localhost:5000/images/";
     return (
         <div className="top">
             <div className="topLeft">
@@ -32,9 +32,10 @@ export default function TopBar() {
             </div>
             <div className="topRight">
                 <Link to="/settings">
-                    {user.photo ? (
-                    <img className ="topImg" src={URLImg + user.photo} alt="foto"/>) : (
-                    <i style={{width:"100px",marginLeft:"20px"}} class="fa-solid fa-user"></i>)}
+                    {/* {user.profilePic ? (
+                    <img className ="topImg" src={URLImg + user.photo} alt="foto"/>) : ()}
+                     */}
+                    <i style={{width:"100px",marginLeft:"20px"}} class="fa-solid fa-user"></i>
                 
                 </Link>
                 <i className=" topSearchIcon fas fa-search"></i>

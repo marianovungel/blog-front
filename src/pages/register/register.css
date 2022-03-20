@@ -3,12 +3,13 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
-    background-size: cover;
+     background-size: cover;
     align-items: center;
+    background-color: rgb(189, 167, 68);
 }
 .registerTitle{
-    font-size: 50px;
+    font-size: 30px;
+    text-align: center;
 }
 .banner{
     background-color: yellow;
@@ -22,21 +23,53 @@
     color: rgb(39, 35, 35);
 }
 .registerForm{
-    margin-top: 20px;
     display: flex;
     flex-direction: column;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    width: 320px;
+    padding: 20px;
+    position: relative;
+    margin-bottom: -20px;
+}
+.vanilla{
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    width: 100px;
+    padding: 20px;
+    transform-style:preserve-3d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform:perspective(1000px);
+    height: 440px;
 }
 label{
     margin: 10px;
 }
 .registerInput{
-     padding: 10px;
-     background-color: white;
-     border: none;
+    padding: 10px;
+    background-color: white;
+    border: none;
+    height: 20px;
+    margin: -10px 0 -10px 0px;
+    border-radius: 10px;
+    width: 93%;
 }
+
 .registerButton{
-    margin-top: 20px;
+    margin-top: 40px;
     cursor: pointer;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
     background-color: teal;
     border: none;
     color: white;

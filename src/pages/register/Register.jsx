@@ -1,6 +1,7 @@
 import "./register.css"
 import { useState } from "react"
 import api from '../../api'
+import Vanilla from 'react-vanilla-tilt'
 
 export default function Register() {
 
@@ -28,16 +29,18 @@ export default function Register() {
     return (
         <div className="register">
             {error && (<div className="banner"> Verifica os seus Dados se estão Corretos!</div>)}
+            <Vanilla className='vanilla'>
             <span className="registerTitle">register</span>
-            <form className="registerForm" onSubmit={handleSubmit}>
-                <label>Username</label>
-                <input className="registerInput" type="text" placeholder="Enter you name..." onChange={e=>setUsername(e.target.value)} />
-                <label>Email</label>
-                <input className="registerInput" type="email" placeholder="Enter you email..." onChange={e=>setEmail(e.target.value)} />
-                <label>Password</label>
-                <input className="registerInput" type="password" placeholder="Enter you password..." onChange={e=>setPassword(e.target.value)} />
-                <button className="registerButton" type="submit" >register</button>
-            </form>
+                <form className="registerForm" onSubmit={handleSubmit}>
+                    <label>Username</label>
+                    <input className="registerInput" type="text" placeholder="Enter you name..." onChange={e=>setUsername(e.target.value)} />
+                    <label>Email</label>
+                    <input className="registerInput" type="email" placeholder="Enter you email..." onChange={e=>setEmail(e.target.value)} />
+                    <label>Password</label>
+                    <input className="registerInput" type="password" placeholder="Enter you password..." onChange={e=>setPassword(e.target.value)} />
+                    <button className="registerButton" type="submit" >register</button>
+                </form>
+            </Vanilla>
             <button className="registerRegisterButton">Login</button>
         </div>
     )

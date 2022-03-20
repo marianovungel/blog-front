@@ -19,7 +19,7 @@ export default function Sidebar() {
             <div className="sidebarItem">
                 <span className="sidebarTitle"> ABOUT ME</span>
                 <img src="https://i.pinimg.com/236x/42/80/a7/4280a717cf2d8025bdc771edf0768eab.jpg" alt="borgrs" className="postImg" />
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing 
+                <p className="pSidibar"> Lorem ipsum dolor sit, amet consectetur adipisicing 
                     elit. Quis laboriosam dolores blanditiis possimus aut nisi commodi ipsum.</p>
             </div>
             <div className="sidebarItem">

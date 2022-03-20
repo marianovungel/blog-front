@@ -8,6 +8,10 @@
     flex-direction: column;
     align-items: center;
 }
+.pSidibar{
+    text-align: justify;
+    padding: 10px;
+}
 .catColor{
     text-decoration: none;
     color: #222;

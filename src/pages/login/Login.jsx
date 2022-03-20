@@ -2,6 +2,9 @@ import { useRef, useContext } from "react";
 import api from '../../api'
 import { Context } from "../../Context/Context";
 import "./login.css"
+import { Link } from "react-router-dom"
+import Vanilla from 'react-vanilla-tilt'
+
 
 export default function Login() {
 
@@ -25,6 +28,7 @@ export default function Login() {
     }
     return (
         <div className="login">
+            <Vanilla className='vanillaLogin'>
             <span className="loginTitle">Login</span>
             <form className="loginForm" onSubmit={handleSubmit}>
                 <label>Username</label>
@@ -33,7 +37,10 @@ export default function Login() {
                 <input className="loginInput" type="password" placeholder="Enter you password..." ref={passwordRef} />
                 <button className="loginButton" type="submit">Login</button>
             </form>
-            <button className="loginRegisterButton">Register</button>
+            </Vanilla>
+            <Link to='/register'>
+                <button className="loginRegisterButton">Register</button>
+            </Link>
         </div>
     )
 }
